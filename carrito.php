@@ -71,4 +71,7 @@ if (isset($_GET['cerrar_sesion'])) {
     echo json_encode(["success" => true, "message" => "Sesión cerrada correctamente"]);
     exit();
 }
+
+    // Evitar el uso de array_filter() en la eliminación del carrito array_filter() conserva las claves del array, lo que puede causar inconsistencias en el índice. En su lugar, usa array_values() para reindexar.
 ?>
+
